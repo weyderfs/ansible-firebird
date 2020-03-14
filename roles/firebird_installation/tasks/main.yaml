@@ -6,7 +6,7 @@
     
     - name: Enable Epel Release
       dnf:
-        name: epel
+        name: epel-release
         enablerepo: epel-releases
     
     - name: install the 'Development tools' package group
@@ -28,12 +28,12 @@
             - bash-completion
             - net-tools
 
-    - name: Start Firebird service
-      systemd:
-        state: started
-        name: firebird-classic.socket
-        enabled: yes
-    
-    - name: Get status of Firebird service
-      shell: |
-        systemctl status firebird-classic.socket
+              #    - name: Start Firebird service
+              #      systemd:
+              #        state: started
+              #        name: firebird-classic.socketr
+              #        enabled: yes
+              #    
+              #    - name: Get status of Firebird service
+              #      shell: |
+              #        systemctl status firebird-classic.socket

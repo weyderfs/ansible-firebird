@@ -1,0 +1,9 @@
+---
+  - name: CentOS 8 - Firebird Installation
+    hosts:  all
+    #    connection: local
+    remote_user: vagrant
+    become: yes
+    gather_facts: True
+    roles:
+      - roles/firebird_installation
