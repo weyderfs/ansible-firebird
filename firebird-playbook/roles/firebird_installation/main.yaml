@@ -1,0 +1,39 @@
+---
+    - name: Upgrade OS System & Install dependencies
+      dnf:
+        name: "*"
+        state: latest
+    
+    - name: Enable Epel Release
+      dnf:
+        name: epel
+        enablerepo: epel-releases
+    
+    - name: install the 'Development tools' package group
+      dnf:
+        name: '@Development tools'
+        state: present 
+
+    - name: Cleaning unused packages
+      dnf:
+        autoremove: yes
+    
+    - name: Install dependencies & Firebird
+      dnf:
+        name:
+            - ncurses-compat-libs
+            - firebird
+            - vim
+            - mlocate
+            - bash-completion
+            - net-tools
+
+    - name: Start Firebird service
+      systemd:
+        state: started
+        name: firebird-classic.socket
+        enabled: yes
+    
+    - name: Get status of Firebird service
+      shell: |
+        systemctl status firebird-classic.socket

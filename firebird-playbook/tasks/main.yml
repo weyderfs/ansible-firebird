@@ -1,0 +1,8 @@
+---
+# tasks file for firebird-playbook
+  - name: CentOS 8 - Firebird Installation
+    hosts:  all
+    become: yes
+    gather_facts: true
+    roles:
+      - roles/firebird_installation
