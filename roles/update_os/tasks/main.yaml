@@ -1,0 +1,19 @@
+---
+- name: Upgrade OS System & Install dependencies
+  dnf:
+    name: "*"
+    state: latest
+
+- name: Enable Epel Release
+  dnf:
+    name: epel-release
+    enablerepo: epel-releases
+
+- name: install the 'Development tools' package group
+  dnf:
+    name: "@Development tools"
+    state: present
+
+- name: Cleaning unused packs
+  dnf:
+    autoremove: yes

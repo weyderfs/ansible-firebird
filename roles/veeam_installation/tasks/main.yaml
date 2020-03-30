@@ -1,0 +1,3 @@
+---
+- name: VEEAM download and Installation
+  dnf:

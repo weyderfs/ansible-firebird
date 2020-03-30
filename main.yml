@@ -6,4 +6,5 @@
     become: yes
     gather_facts: True
     roles:
+      - roles/update_os
       - roles/firebird_installation
