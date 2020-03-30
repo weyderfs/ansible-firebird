@@ -1,19 +1,19 @@
 ---
 - name: Upgrade OS System & Install dependencies
-  dnf:
+  yum:
     name: "*"
     state: latest
 
 - name: Enable Epel Release
-  dnf:
+  yum:
     name: epel-release
     enablerepo: epel-releases
 
 - name: install the 'Development tools' package group
-  dnf:
+  yum:
     name: "@Development tools"
     state: present
 
 - name: Cleaning unused packs
-  dnf:
+  yum:
     autoremove: yes

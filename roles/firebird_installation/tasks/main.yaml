@@ -1,6 +1,6 @@
 ---
   - name: Install dependencies
-    dnf:
+    yum:
       name:
         - ncurses-compat-libs
         - vim
@@ -17,7 +17,7 @@
       dest: /tmp
   
   - name: Firebird Installation
-    dnf:
+    yum:
       name: /tmp/FirebirdCS-2.5.9.27139-0.amd64.rpm
       state: present
 
