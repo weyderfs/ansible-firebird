@@ -9,6 +9,7 @@
         - net-tools
         - wget
         - curl
+        - git
 
   - name: Firebird Download and Installation
     dnf:
