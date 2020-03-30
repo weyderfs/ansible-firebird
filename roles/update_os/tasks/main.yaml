@@ -6,8 +6,9 @@
 
 - name: Enable Epel Release
   yum:
-    name: epel-release
-    state: present
+    name: epel
+    description: Epel YUM Repo
+    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
 
 - name: install the 'Development tools' package group
   yum:
