@@ -11,9 +11,14 @@
         - curl
         - git
 
-  - name: Firebird Download and Installation
-    dnf:
+  - name: Firebird Download
+    get_url:
       url: https://github.com/FirebirdSQL/firebird/releases/download/R2_5_9/FirebirdCS-2.5.9.27139-0.amd64.rpm
+      dest: /tmp
+  
+  - name: Firebird Installation
+    dnf:
+      name: /tmp/FirebirdCS-2.5.9.27139-0.amd64.rpm
       state: present
 
 
