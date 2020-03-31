@@ -10,12 +10,3 @@
     description: Epel YUM Repo
     baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
     gpgcheck: no
-
-- name: install the 'Development tools' package group
-  yum:
-    name: "@Development tools"
-    state: present
-
-- name: Cleaning unused packs
-  shell: |
-    yum clean all
