@@ -16,5 +16,5 @@
     state: present
 
 - name: Cleaning unused packs
-  yum:
-    autoremove: yes
+  shell: |
+    yum clean all
