@@ -10,9 +10,14 @@
         - curl
         - git
 
-  - name: Firebird Download
+  - name: Firebird Installation
     yum:
       name: firebird
       state: latest
 
+  - name: Starting Firebird
+    systemd:
+      state: started
+      name: firebird-superserver
+      enabled: yes
 
