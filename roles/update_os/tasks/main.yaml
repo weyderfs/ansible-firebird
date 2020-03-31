@@ -9,6 +9,7 @@
     name: epel
     description: Epel YUM Repo
     baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    gpgcheck: no
 
 - name: install the 'Development tools' package group
   yum:
