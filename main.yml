@@ -1,5 +1,5 @@
 ---
-  - name: CentOS 8 - Firebird Installation
+  - name: CentOS 7 - Firebird Setup Installation
     hosts:  all
     #    connection: local
     remote_user: vagrant
